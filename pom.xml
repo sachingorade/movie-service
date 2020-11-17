@@ -9,13 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ts</groupId>
-    <artifactId>movie-service</artifactId>
+    <artifactId>apiMovie-service</artifactId>
     <version>0.0.1</version>
-    <name>movie-service</name>
-    <description>Simple movie media service</description>
+    <name>apiMovie-service</name>
+    <description>Simple apiMovie media service</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <javax.validation>2.0.1.Final</javax.validation>
     </properties>
 
     <dependencies>
@@ -30,6 +31,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation}</version>
         </dependency>
 
         <dependency>
