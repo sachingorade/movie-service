@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    app: movie-service
+    type: be-service
+  name: movie-service-pod
+  namespace: movies-ns
+spec:
+  containers:
+    - env:
+        - name: DB_URL
+          value: jdbc:postgresql://postgres-service.default.svc.cluster.local:5432/movies
+        - name: DB_USERNAME
+          value: postgres
+        - name: DB_PASSWORD
+          value: postgres
+      image: sachingorade/movie-service:0.3
+      name: movie-service
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080
+      resources: { }
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
