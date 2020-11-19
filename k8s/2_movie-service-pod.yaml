@@ -12,6 +12,8 @@ spec:
     - envFrom:
         - configMapRef:
             name: movie-service-config-map
+        - secretRef:
+            name: movie-service-secret
       image: sachingorade/movie-service:0.3
       name: movie-service
       imagePullPolicy: IfNotPresent

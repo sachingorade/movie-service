@@ -7,5 +7,3 @@ metadata:
     app: movie-service
 data:
   DB_URL: jdbc:postgresql://postgres-service.default.svc.cluster.local:5432/movies
-  DB_USERNAME: postgres
-  DB_PASSWORD: postgres
